@@ -413,75 +413,80 @@ main {
 }
 
 
-/* Wochenstundenplan */
+/* Standorte und Stundenpläne */
 
-.wochenplan {
+.standorte-grid {
     display: grid;
     gap: 18px;
 }
 
-.tag-karte {
+.standort-karte {
     overflow: hidden;
     border-radius: 24px;
     background: var(--weiss);
     box-shadow: var(--schatten);
 }
 
-.tag-kopf {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 18px;
-    background: var(--blau);
-    color: var(--weiss);
+.standort-bilder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding: 4px;
+    background: #E8ECF0;
 }
 
-.tag-kopf span {
-    display: grid;
-    width: 48px;
-    height: 48px;
-    flex: 0 0 auto;
-    place-items: center;
-    border-radius: 15px;
+.standort-bilder img {
+    width: 100%;
+    height: 132px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.standort-bilder img:first-child {
+    border-radius: 18px 6px 6px 18px;
+}
+
+.standort-bilder img:last-child {
+    border-radius: 6px 18px 18px 6px;
+}
+
+.standort-inhalt {
+    padding: 22px 20px 20px;
+}
+
+.standort-label {
+    margin: 0 0 3px;
+    color: var(--gruen-dunkel);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.standort-inhalt h3 {
+    margin: 0 0 18px;
+    color: var(--blau);
+    font-size: 1.55rem;
+    line-height: 1.1;
+}
+
+.stundenplan-button {
+    display: flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 14px;
     background: var(--gruen);
     color: var(--blau);
+    font-size: 0.9rem;
     font-weight: 900;
+    text-decoration: none;
 }
 
-.tag-kopf h3 {
-    margin: 0;
-    font-size: 1.35rem;
-}
-
-.stundenliste {
-    margin: 0;
-    padding: 4px 18px;
-    list-style: none;
-}
-
-.stundenliste li {
-    display: grid;
-    grid-template-columns: 104px 1fr;
-    gap: 12px;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--linie);
-}
-
-.stundenliste li:last-child {
-    border-bottom: 0;
-}
-
-.stundenliste time {
-    color: var(--gruen-dunkel);
-    font-size: 0.86rem;
-    font-weight: 900;
-    font-variant-numeric: tabular-nums;
-}
-
-.stundenliste strong {
-    color: var(--blau);
-    font-size: 0.95rem;
-    line-height: 1.35;
+.stundenplan-button span {
+    font-size: 1.2rem;
 }
 
 .abschluss-karte {
