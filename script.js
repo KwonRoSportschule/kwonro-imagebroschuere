@@ -3,7 +3,7 @@ const themen = {
         label: "Mehr Selbstvertrauen",
         titel: "Ich kann das schaffen.",
         absatzEins:
-            "Kinder erleben im Training viele kleine Erfolge. Sie merken: Mit Übung kann ich Herausforderungen meistern und über mich hinauswachsen.",
+            "Kinder erleben im Training viele kleine Erfolge. Dabei merken sie: Mit Übung kann ich Herausforderungen meistern und über mich hinauswachsen.",
         absatzZwei:
             "Dieses Gefühl stärkt den Mut, auch außerhalb der Sportschule an die eigenen Fähigkeiten zu glauben."
     },
@@ -12,7 +12,7 @@ const themen = {
         label: "Disziplin spielerisch entwickeln",
         titel: "Dranbleiben lohnt sich.",
         absatzEins:
-            "Klare Abläufe, gemeinsame Regeln und erreichbare Ziele geben Kindern Orientierung. Sie lernen, aufmerksam zu bleiben und Verantwortung zu übernehmen.",
+            "Klare Abläufe, gemeinsame Regeln und erreichbare Ziele geben Kindern Orientierung. Dabei lernen sie, aufmerksam zu bleiben und Verantwortung zu übernehmen.",
         absatzZwei:
             "Disziplin entsteht bei KwonRo nicht durch Druck, sondern durch positive Erfahrungen, regelmäßige Übung und Freude am Fortschritt."
     },
@@ -23,7 +23,7 @@ const themen = {
         absatzEins:
             "Kinder üben, auf ihr Gefühl zu achten, Abstand zu halten und deutlich Nein zu sagen, wenn ihnen eine Situation unangenehm vorkommt.",
         absatzZwei:
-            "Sie lernen außerdem, sich frühzeitig an vertraute Erwachsene zu wenden und Hilfe zu holen."
+            "Außerdem lernen sie, sich frühzeitig an vertraute Erwachsene zu wenden und Hilfe zu holen."
     },
 
     noten: {
@@ -32,7 +32,7 @@ const themen = {
         absatzEins:
             "Im Training hören Kinder aufmerksam zu, merken sich Bewegungsfolgen und setzen Aufgaben Schritt für Schritt um.",
         absatzZwei:
-            "Diese Gewohnheiten können Konzentration, Ausdauer und eine strukturierte Lernhaltung unterstützen – ohne bessere Noten zu versprechen."
+            "Diese Gewohnheiten stärken Konzentration, Ausdauer und eine strukturierte Lernhaltung. Das kann sich durchaus positiv auf die schulischen Leistungen auswirken."
     },
 
     koordination: {
@@ -141,5 +141,56 @@ if ("IntersectionObserver" in window) {
 
     bereiche.forEach((bereich) => {
         observer.observe(bereich);
+    });
+}
+
+
+const animationsZiele = document.querySelectorAll(
+    [
+        ".willkommen",
+        ".fotobereich",
+        ".dunkelbereich > .eyebrow",
+        ".dunkelbereich > h2",
+        ".dunkelbereich > .einleitung",
+        ".themen-auswahl",
+        ".ergebnis-karte",
+        ".standort-karte",
+        ".abschluss-karte"
+    ].join(",")
+);
+
+const wenigerBewegung = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
+
+if ("IntersectionObserver" in window && !wenigerBewegung) {
+    animationsZiele.forEach((element, index) => {
+        element.classList.add("einflug");
+
+        if (index % 2 !== 0) {
+            element.classList.add("einflug-von-rechts");
+        }
+    });
+
+    const einflugObserver = new IntersectionObserver(
+        (eintraege) => {
+            eintraege.forEach((eintrag) => {
+                if (!eintrag.isIntersecting) {
+                    return;
+                }
+
+                eintrag.target.classList.add("sichtbar");
+                einflugObserver.unobserve(eintrag.target);
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -8% 0px"
+        }
+    );
+
+    animationsZiele.forEach((element) => {
+        einflugObserver.observe(element);
     });
 }

@@ -322,16 +322,15 @@ main {
 .thema-button {
     display: flex;
     min-width: 0;
-    min-height: 112px;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-    padding: 14px;
+    min-height: 62px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 20px;
+    border-radius: 16px;
     background: rgba(255, 255, 255, 0.06);
     color: var(--weiss);
-    text-align: left;
+    text-align: center;
     cursor: pointer;
     transition:
         transform 180ms ease,
@@ -349,29 +348,11 @@ main {
     color: var(--blau);
 }
 
-.button-icon {
-    display: grid;
-    width: 36px;
-    height: 36px;
-    flex: 0 0 auto;
-    place-items: center;
-    border-radius: 12px;
-    background: var(--gruen);
-    color: var(--blau);
-    font-size: 1rem;
-    font-weight: 900;
-}
-
-.thema-button.aktiv .button-icon {
-    background: var(--blau);
-    color: var(--gruen);
-}
-
 .button-text {
     overflow-wrap: anywhere;
-    font-size: 0.92rem;
+    font-size: 0.88rem;
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 .ergebnis-karte {
@@ -431,8 +412,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4px;
-    padding: 4px;
-    background: #E8ECF0;
+    padding: 8px 8px 0;
+    background: var(--weiss);
 }
 
 .standort-bilder img {
@@ -474,8 +455,7 @@ main {
     display: flex;
     min-height: 52px;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    justify-content: center;
     padding: 12px 16px;
     border-radius: 14px;
     background: var(--gruen);
@@ -483,10 +463,6 @@ main {
     font-size: 0.9rem;
     font-weight: 900;
     text-decoration: none;
-}
-
-.stundenplan-button span {
-    font-size: 1.2rem;
 }
 
 .abschluss-karte {
@@ -524,10 +500,10 @@ main {
     left: 12px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    min-height: 68px;
-    padding: 7px;
+    min-height: 50px;
+    padding: 5px;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 22px;
+    border-radius: 18px;
     background: rgba(12, 35, 64, 0.94);
     box-shadow: 0 18px 45px rgba(12, 35, 64, 0.28);
     backdrop-filter: blur(18px);
@@ -537,22 +513,37 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 2px;
-    border-radius: 16px;
+    border-radius: 13px;
     color: rgba(255, 255, 255, 0.62);
-    font-size: 0.64rem;
+    font-size: 0.72rem;
     font-weight: 700;
     text-decoration: none;
-}
-
-.nav-link span {
-    font-size: 1rem;
 }
 
 .nav-link.aktiv {
     background: var(--gruen);
     color: var(--blau);
+}
+
+
+/* Dezente Einflug-Animation beim ersten Scrollen */
+
+.einflug {
+    opacity: 0;
+    transform: translateX(-34px);
+    transition:
+        opacity 700ms ease,
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.einflug-von-rechts {
+    transform: translateX(34px);
+}
+
+.einflug.sichtbar {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 
@@ -584,13 +575,8 @@ main {
     }
 
     .thema-button {
-        min-height: 82px;
+        min-height: 54px;
         justify-content: center;
-    }
-
-    .stundenliste li {
-        grid-template-columns: 1fr;
-        gap: 4px;
     }
 }
 
@@ -604,5 +590,11 @@ main {
 
     * {
         transition: none !important;
+    }
+
+    .einflug,
+    .einflug-von-rechts {
+        opacity: 1;
+        transform: none;
     }
 }
