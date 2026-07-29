@@ -80,7 +80,7 @@ button {
 
 .hero-aussage {
     margin: auto 0;
-    padding: 54px 0 34px;
+    padding: 54px 0 20px;
 }
 
 .eyebrow {
@@ -122,8 +122,7 @@ button {
     line-height: 1.65;
 }
 
-.hauptbutton,
-.zweiter-button {
+.hauptbutton {
     display: inline-flex;
     min-height: 58px;
     align-items: center;
@@ -138,8 +137,9 @@ button {
     text-decoration: none;
 }
 
-.hauptbutton span {
-    font-size: 1.35rem;
+.hauptbutton {
+    align-self: flex-start;
+    margin-bottom: 18px;
 }
 
 .scroll-hinweis {
@@ -484,9 +484,206 @@ main {
     color: var(--text-hell);
 }
 
-.zweiter-button {
+.abschluss-karte .trainer-hinweis {
+    margin: 25px 0 0;
+    padding: 20px;
+    border-left: 6px solid var(--gruen);
+    border-radius: 0 18px 18px 0;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--weiss);
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.55;
+}
+
+
+/* Programme */
+
+.programme-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.programm-karte {
+    --programm-farbe: var(--blau);
+    position: relative;
+    overflow: hidden;
+    padding: 25px 22px;
+    border-radius: 24px;
+    background: var(--weiss);
+    box-shadow: var(--schatten);
+}
+
+.programm-karte::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 7px;
+    background: var(--programm-farbe);
+}
+
+.programm-alter {
+    margin: 0 0 5px;
+    color: var(--programm-farbe);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.programm-karte h3 {
+    margin: 0 0 10px;
+    color: var(--blau);
+    font-size: 1.55rem;
+    line-height: 1.1;
+}
+
+.programm-karte p:last-child {
+    margin: 0;
+    color: #526176;
+}
+
+.programm-muki {
+    --programm-farbe: #008FA5;
+}
+
+.programm-panda {
+    --programm-farbe: #80539D;
+}
+
+.programm-tiger {
+    --programm-farbe: #EF7D00;
+}
+
+.programm-warrior {
+    --programm-farbe: #E53312;
+}
+
+.programm-erwachsene {
+    --programm-farbe: #102851;
+}
+
+.programm-kickboxen {
+    --programm-farbe: #003366;
+}
+
+.graduierung {
+    overflow: hidden;
+    margin: 42px 0 0;
+    border-radius: 26px;
+    background: var(--weiss);
+    box-shadow: var(--schatten);
+}
+
+.graduierung img {
     width: 100%;
-    margin-top: 15px;
+    height: auto;
+}
+
+.graduierung figcaption {
+    padding: 20px 22px 23px;
+    color: #526176;
+    font-size: 0.92rem;
+}
+
+
+/* Gemeinschaft und Events */
+
+.events-bereich {
+    max-width: none;
+    padding-right: max(22px, calc((100vw - 556px) / 2));
+    padding-left: max(22px, calc((100vw - 556px) / 2));
+    color: var(--weiss);
+    background: var(--blau);
+}
+
+.events-bereich h2 {
+    color: var(--weiss);
+}
+
+.events-grid {
+    display: grid;
+    gap: 17px;
+}
+
+.event-karte {
+    overflow: hidden;
+    border-radius: 24px;
+    background: var(--weiss);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.22);
+}
+
+.event-karte > img,
+.event-bilder img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.event-karte:first-child > img {
+    object-position: center 58%;
+}
+
+.event-bilder {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 4px;
+    padding: 7px 7px 0;
+    background: var(--weiss);
+}
+
+.event-bilder img {
+    height: 165px;
+    border-radius: 17px;
+}
+
+.event-inhalt {
+    padding: 21px 22px 24px;
+}
+
+.event-zeit {
+    margin: 0 0 5px;
+    color: var(--gruen-dunkel);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.event-inhalt h3 {
+    margin: 0 0 10px;
+    color: var(--blau);
+    font-size: 1.45rem;
+    line-height: 1.1;
+}
+
+.event-inhalt p:last-child {
+    margin: 0;
+    color: #526176;
+}
+
+
+/* Sponsoren */
+
+.sponsoren-bereich {
+    padding-bottom: 130px;
+}
+
+.sponsoren-bereich h2 {
+    font-size: clamp(2.15rem, 9.5vw, 3.35rem);
+}
+
+.sponsoren-flaeche {
+    margin-top: 34px;
+    padding: 22px;
+    border-radius: 24px;
+    background: var(--weiss);
+    box-shadow: var(--schatten);
+}
+
+.sponsoren-flaeche img {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -499,9 +696,9 @@ main {
     bottom: calc(10px + env(safe-area-inset-bottom));
     left: 12px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    min-height: 50px;
-    padding: 5px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    min-height: 46px;
+    padding: 4px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 18px;
     background: rgba(12, 35, 64, 0.94);
@@ -513,10 +710,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 13px;
+    min-width: 0;
+    padding: 0 2px;
+    border-radius: 12px;
     color: rgba(255, 255, 255, 0.62);
-    font-size: 0.72rem;
+    font-size: clamp(0.52rem, 2.35vw, 0.68rem);
     font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
     text-decoration: none;
 }
 
@@ -561,7 +762,7 @@ main {
     .mobile-navigation {
         right: 50%;
         left: auto;
-        width: 520px;
+        width: 620px;
         transform: translateX(50%);
     }
 }

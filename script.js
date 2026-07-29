@@ -106,7 +106,7 @@ themaButtons.forEach((button) => {
 
 
 const bereiche = document.querySelectorAll(
-    "#start, #willkommen, #taekwondo, #stundenplan"
+    "#start, #taekwondo, #stundenplan, #programme, #events, #sponsoren"
 );
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -155,7 +155,16 @@ const animationsZiele = document.querySelectorAll(
         ".themen-auswahl",
         ".ergebnis-karte",
         ".standort-karte",
-        ".abschluss-karte"
+        ".abschluss-karte",
+        ".programm-karte",
+        ".graduierung",
+        ".events-bereich > .eyebrow",
+        ".events-bereich > h2",
+        ".events-bereich > .einleitung",
+        ".event-karte",
+        ".sponsoren-bereich > .eyebrow",
+        ".sponsoren-bereich > h2",
+        ".sponsoren-flaeche"
     ].join(",")
 );
 
