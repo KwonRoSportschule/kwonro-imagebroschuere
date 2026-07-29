@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0C2340">
+
+    <title>KwonRo Sportschule</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="hero" id="start">
+        <div class="hero-inhalt">
+
+            <div class="logo-flaeche">
+                <img
+                    class="logo"
+                    src="bilder/kwonro-logo.png"
+                    alt="KwonRo Sportschule"
+                >
+            </div>
+
+            <div class="hero-aussage">
+                <p class="eyebrow">Herzlich willkommen</p>
+
+                <h1>Stark fürs Leben.</h1>
+
+                <p class="hero-text">
+                    Taekwondo, Gemeinschaft und persönliche Entwicklung
+                    in einer Umgebung, in der Kinder wachsen können.
+                </p>
+
+                <a class="hauptbutton" href="#willkommen">
+                    Broschüre entdecken
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+        </div>
+
+        <p class="scroll-hinweis">Nach unten wischen</p>
+    </header>
+
+
+    <main>
+
+        <section class="abschnitt willkommen" id="willkommen">
+            <div class="bereichsnummer">01</div>
+
+            <p class="eyebrow dunkel">Schön, dass Sie da sind</p>
+
+            <h2>Willkommen bei KwonRo.</h2>
+
+            <p class="willkommen-gross">
+                Hier darf Ihr Kind wachsen, Neues ausprobieren
+                und mit Freude stärker werden.
+            </p>
+
+            <p class="willkommen-kurz">
+                Wir freuen uns, Sie und Ihr Kind kennenzulernen.
+            </p>
+        </section>
+
+
+        <figure class="fotobereich">
+            <img
+                src="bilder/training-gemeinschaft.jpg"
+                alt="Einblick in das Training der KwonRo Sportschule"
+            >
+
+            <figcaption>
+                Gemeinsam trainieren. Gemeinsam wachsen.
+            </figcaption>
+        </figure>
+
+
+        <section class="abschnitt dunkelbereich" id="taekwondo">
+            <div class="bereichsnummer hell">02</div>
+
+            <p class="eyebrow">Individuelle Stärken fördern</p>
+
+            <h2>
+                Was bringt Taekwondo bei KwonRo meinem Kind?
+            </h2>
+
+            <p class="einleitung helltext">
+                Wählen Sie das Thema aus, das für Sie und Ihr Kind
+                besonders wichtig ist.
+            </p>
+
+            <div class="themen-auswahl" aria-label="Thema auswählen">
+
+                <button
+                    class="thema-button aktiv"
+                    data-thema="selbstvertrauen"
+                    type="button"
+                    aria-pressed="true"
+                >
+                    <span class="button-icon" aria-hidden="true">↑</span>
+                    <span class="button-text">Mehr Selbstvertrauen</span>
+                </button>
+
+                <button
+                    class="thema-button"
+                    data-thema="disziplin"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <span class="button-icon" aria-hidden="true">✓</span>
+                    <span class="button-text">Disziplin entwickeln</span>
+                </button>
+
+                <button
+                    class="thema-button"
+                    data-thema="fremde"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <span class="button-icon" aria-hidden="true">◎</span>
+                    <span class="button-text">Umgang mit Fremden</span>
+                </button>
+
+                <button
+                    class="thema-button"
+                    data-thema="noten"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <span class="button-icon" aria-hidden="true">A</span>
+                    <span class="button-text">Lernen &amp; Konzentration</span>
+                </button>
+
+                <button
+                    class="thema-button"
+                    data-thema="koordination"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <span class="button-icon" aria-hidden="true">+</span>
+                    <span class="button-text">Koordination</span>
+                </button>
+
+                <button
+                    class="thema-button"
+                    data-thema="mobbing"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <span class="button-icon" aria-hidden="true">◇</span>
+                    <span class="button-text">Sicher bei Mobbing</span>
+                </button>
+
+                <button
+                    class="thema-button"
+                    data-thema="ausgleich"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <span class="button-icon" aria-hidden="true">≈</span>
+                    <span class="button-text">Ausgleich zum Schulalltag</span>
+                </button>
+
+                <button
+                    class="thema-button"
+                    data-thema="selbstverteidigung"
+                    type="button"
+                    aria-pressed="false"
+                >
+                    <span class="button-icon" aria-hidden="true">●</span>
+                    <span class="button-text">Selbstverteidigung</span>
+                </button>
+
+            </div>
+
+            <article
+                class="ergebnis-karte"
+                id="themenInhalt"
+                aria-live="polite"
+            >
+                <p class="ergebnis-label">Mehr Selbstvertrauen</p>
+
+                <h3>Ich kann das schaffen.</h3>
+
+                <p>
+                    Kinder erleben im Training viele kleine Erfolge.
+                    Sie merken: Mit Übung kann ich Herausforderungen
+                    meistern und über mich hinauswachsen.
+                </p>
+
+                <p>
+                    Dieses Gefühl stärkt den Mut, auch außerhalb der
+                    Sportschule an die eigenen Fähigkeiten zu glauben.
+                </p>
+            </article>
+        </section>
+
+
+        <figure class="fotobereich fotobereich-zwei">
+            <img
+                src="bilder/training-fokus.jpg"
+                alt="Taekwondo-Training in der KwonRo Sportschule"
+            >
+
+            <figcaption>
+                Bewegung, Konzentration und Freude.
+            </figcaption>
+        </figure>
+
+
+        <section class="abschnitt" id="stundenplan">
+            <div class="bereichsnummer">03</div>
+
+            <p class="eyebrow dunkel">Training im Überblick</p>
+
+            <h2>Unser Wochenstundenplan</h2>
+
+            <p class="einleitung">
+                Alle Stunden aus dem vorliegenden Einsatzplan –
+                übersichtlich nach Wochentagen geordnet.
+            </p>
+
+            <div class="wochenplan">
+
+                <article class="tag-karte">
+                    <header class="tag-kopf">
+                        <span>MO</span>
+                        <h3>Montag</h3>
+                    </header>
+
+                    <ul class="stundenliste">
+                        <li>
+                            <time>10:00–11:00</time>
+                            <strong>TKD Jugend &amp; Erwachsene</strong>
+                        </li>
+                        <li>
+                            <time>15:00–15:45</time>
+                            <strong>MuKi</strong>
+                        </li>
+                        <li>
+                            <time>16:00–16:45</time>
+                            <strong>Panda-Kids</strong>
+                        </li>
+                        <li>
+                            <time>17:00–17:45</time>
+                            <strong>Tiger-Kids</strong>
+                        </li>
+                        <li>
+                            <time>18:00–18:45</time>
+                            <strong>Warrior-Tigers</strong>
+                        </li>
+                        <li>
+                            <time>19:00–20:00</time>
+                            <strong>TKD Jugend &amp; Erwachsene</strong>
+                        </li>
+                        <li>
+                            <time>20:15–21:15</time>
+                            <strong>Kickboxen</strong>
+                        </li>
+                    </ul>
+                </article>
+
+
+                <article class="tag-karte">
+                    <header class="tag-kopf">
+                        <span>MI</span>
+                        <h3>Mittwoch</h3>
+                    </header>
+
+                    <ul class="stundenliste">
+                        <li>
+                            <time>16:00–16:45</time>
+                            <strong>Panda-Kids</strong>
+                        </li>
+                        <li>
+                            <time>17:00–17:45</time>
+                            <strong>Tiger-Kids</strong>
+                        </li>
+                        <li>
+                            <time>18:00–18:45</time>
+                            <strong>Warrior-Tigers</strong>
+                        </li>
+                        <li>
+                            <time>19:00–20:00</time>
+                            <strong>TKD Jugend &amp; Erwachsene</strong>
+                        </li>
+                        <li>
+                            <time>19:00–20:00</time>
+                            <strong>Lady-Kickboxen</strong>
+                        </li>
+                    </ul>
+                </article>
+
+
+                <article class="tag-karte">
+                    <header class="tag-kopf">
+                        <span>FR</span>
+                        <h3>Freitag</h3>
+                    </header>
+
+                    <ul class="stundenliste">
+                        <li>
+                            <time>16:00–16:45</time>
+                            <strong>Panda-Kids</strong>
+                        </li>
+                        <li>
+                            <time>17:00–17:45</time>
+                            <strong>Tiger-Kids</strong>
+                        </li>
+                        <li>
+                            <time>18:00–18:45</time>
+                            <strong>Warrior-Tigers</strong>
+                        </li>
+                        <li>
+                            <time>18:00–18:45</time>
+                            <strong>Jug-Kickboxen</strong>
+                        </li>
+                        <li>
+                            <time>19:00–20:00</time>
+                            <strong>Lady-Kickboxen</strong>
+                        </li>
+                        <li>
+                            <time>19:00–20:00</time>
+                            <strong>Kickboxen</strong>
+                        </li>
+                    </ul>
+                </article>
+
+            </div>
+
+
+            <div class="abschluss-karte">
+                <p class="eyebrow">Der erste Schritt</p>
+
+                <h3>Heute beginnt eine neue Erfahrung.</h3>
+
+                <p>
+                    Wir wünschen Ihrem Kind viel Freude beim Probetraining
+                    und eine spannende Zeit bei KwonRo.
+                </p>
+
+                <a href="#start" class="zweiter-button">
+                    Zurück zum Anfang
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <nav class="mobile-navigation" aria-label="Seitennavigation">
+        <a href="#start" class="nav-link aktiv">
+            <span aria-hidden="true">⌂</span>
+            Start
+        </a>
+
+        <a href="#willkommen" class="nav-link">
+            <span aria-hidden="true">◆</span>
+            KwonRo
+        </a>
+
+        <a href="#taekwondo" class="nav-link">
+            <span aria-hidden="true">↑</span>
+            Stärken
+        </a>
+
+        <a href="#stundenplan" class="nav-link">
+            <span aria-hidden="true">▦</span>
+            Zeiten
+        </a>
+    </nav>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
