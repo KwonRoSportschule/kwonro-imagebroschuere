@@ -1,74 +1,38 @@
 const themen = {
-    selbstvertrauen: {
-        label: "Mehr Selbstvertrauen",
-        titel: "Ich kann das schaffen.",
-        absatzEins:
-            "Kinder erleben im Training viele kleine Erfolge. Dabei merken sie: Mit Übung kann ich Herausforderungen meistern und über mich hinauswachsen.",
-        absatzZwei:
-            "Dieses Gefühl stärkt den Mut, auch außerhalb der Sportschule an die eigenen Fähigkeiten zu glauben."
+    sicherheit: {
+        label: "Sicherheit/Selbstverteidigung",
+        text:
+            "Im Taekwondo lernen Kinder, sich in schwierigen Situationen richtig zu verhalten. Sie entwickeln ein gutes Gespür dafür, Gefahren frühzeitig zu erkennen und Konflikten möglichst aus dem Weg zu gehen. Falls es doch einmal nötig wird, kennen sie einfache und wirkungsvolle Techniken, um sich zu schützen. Das gibt Sicherheit und sorgt dafür, dass Kinder mit einem ganz anderen Gefühl durchs Leben gehen."
     },
 
-    disziplin: {
-        label: "Disziplin spielerisch entwickeln",
-        titel: "Dranbleiben lohnt sich.",
-        absatzEins:
-            "Klare Abläufe, gemeinsame Regeln und erreichbare Ziele geben Kindern Orientierung. Dabei lernen sie, aufmerksam zu bleiben und Verantwortung zu übernehmen.",
-        absatzZwei:
-            "Disziplin entsteht bei KwonRo nicht durch Druck, sondern durch positive Erfahrungen, regelmäßige Übung und Freude am Fortschritt."
+    selbstbewusstsein: {
+        label: "Selbstbewusstsein",
+        text:
+            "Jedes Kind wächst an seinen eigenen Erfolgen. Eine neue Technik, die nächste Gürtelprüfung oder ein schwieriges Ziel, das plötzlich gelingt, stärkt das Vertrauen in die eigenen Fähigkeiten. Dieses Selbstbewusstsein bleibt nicht in der Sportschule. Viele Kinder treten auch in der Schule, im Freundeskreis und im Alltag sicherer auf."
     },
 
-    fremde: {
-        label: "Sicherer Umgang mit Fremden",
-        titel: "Aufmerksam und selbstbewusst handeln.",
-        absatzEins:
-            "Kinder üben, auf ihr Gefühl zu achten, Abstand zu halten und deutlich Nein zu sagen, wenn ihnen eine Situation unangenehm vorkommt.",
-        absatzZwei:
-            "Außerdem lernen sie, sich frühzeitig an vertraute Erwachsene zu wenden und Hilfe zu holen."
+    stress: {
+        label: "Stress reduzieren",
+        text:
+            "Der Schulalltag fordert Kinder heute mehr denn je. Im Training können sie den Kopf freibekommen und sich ganz auf die Bewegung konzentrieren. Das hilft dabei, den Alltag für eine Weile auszublenden und neue Energie zu sammeln. Viele Eltern berichten, dass ihre Kinder nach dem Training ausgeglichener und entspannter sind."
     },
 
-    noten: {
-        label: "Lernen und Konzentration",
-        titel: "Mit mehr Fokus bei der Sache.",
-        absatzEins:
-            "Im Training hören Kinder aufmerksam zu, merken sich Bewegungsfolgen und setzen Aufgaben Schritt für Schritt um.",
-        absatzZwei:
-            "Diese Gewohnheiten stärken Konzentration, Ausdauer und eine strukturierte Lernhaltung. Das kann sich durchaus positiv auf die schulischen Leistungen auswirken."
+    fitness: {
+        label: "Fitness/Beweglichkeit",
+        text:
+            "Taekwondo trainiert den ganzen Körper auf eine abwechslungsreiche Weise. Kraft, Ausdauer und Beweglichkeit entwickeln sich mit jeder Trainingseinheit. Die Übungen fördern eine gesunde Körperhaltung und machen Kinder fit für den Alltag. Dabei steht nicht Leistung im Vordergrund, sondern die Freude an der Bewegung."
     },
 
     koordination: {
         label: "Koordination",
-        titel: "Bewegungen sicher verbinden.",
-        absatzEins:
-            "Taekwondo verbindet Gleichgewicht, Reaktion, Beweglichkeit und die gezielte Zusammenarbeit von Armen und Beinen.",
-        absatzZwei:
-            "Durch abwechslungsreiche Übungen entwickeln Kinder ein besseres Körpergefühl und gewinnen Sicherheit in ihren Bewegungen."
+        text:
+            "Viele Techniken im Taekwondo verlangen ein gutes Zusammenspiel von Armen, Beinen und dem ganzen Körper. Dadurch verbessern Kinder ihre Koordination Schritt für Schritt. Auch Gleichgewicht und Reaktionsvermögen entwickeln sich weiter. Diese Fähigkeiten helfen nicht nur im Sport, sondern oft auch beim Lernen und in vielen Alltagssituationen."
     },
 
-    mobbing: {
-        label: "Sicher bei Mobbing",
-        titel: "Haltung zeigen und Hilfe holen.",
-        absatzEins:
-            "Eine klare Stimme, eine aufrechte Haltung und das Wahrnehmen eigener Grenzen können Kindern in schwierigen Situationen mehr Sicherheit geben.",
-        absatzZwei:
-            "Bei KwonRo lernen sie: Konflikte möglichst vermeiden, deutlich Grenzen setzen und Unterstützung bei Erwachsenen suchen."
-    },
-
-    ausgleich: {
-        label: "Ausgleich zum Schulalltag",
-        titel: "Bewegen, abschalten, neue Energie sammeln.",
-        absatzEins:
-            "Nach einem langen Schultag hilft Bewegung dabei, den Kopf freizubekommen und angestaute Energie positiv zu nutzen.",
-        absatzZwei:
-            "Feste Trainingszeiten, Gemeinschaft und Erfolgserlebnisse schaffen einen wohltuenden Gegenpol zum Alltag."
-    },
-
-    selbstverteidigung: {
-        label: "Selbstverteidigung",
-        titel: "Gefahren früh erkennen.",
-        absatzEins:
-            "Gute Selbstverteidigung beginnt nicht mit einem Kampf. Kinder lernen, aufmerksam zu sein, Abstand zu schaffen und gefährliche Situationen möglichst zu verlassen.",
-        absatzZwei:
-            "Altersgerechte Techniken geben zusätzliche Handlungsmöglichkeiten, wenn Weggehen und Hilfeholen allein nicht ausreichen."
+    "anti-mobbing": {
+        label: "Anti-Mobbing",
+        text:
+            "Kinder, die selbstbewusst auftreten, werden häufig anders wahrgenommen. Im Taekwondo lernen sie, Grenzen klar zu setzen und auch in schwierigen Momenten ruhig zu bleiben. Gleichzeitig gehören Respekt und ein fairer Umgang mit anderen fest zum Training. So entwickeln sie die Stärke, Konflikte selbstbewusst und besonnen zu begegnen, ohne Gewalt als erste Lösung zu sehen."
     }
 };
 
@@ -94,9 +58,7 @@ themaButtons.forEach((button) => {
         window.setTimeout(() => {
             themenInhalt.innerHTML = `
                 <p class="ergebnis-label">${inhalt.label}</p>
-                <h3>${inhalt.titel}</h3>
-                <p>${inhalt.absatzEins}</p>
-                <p>${inhalt.absatzZwei}</p>
+                <p>${inhalt.text}</p>
             `;
 
             themenInhalt.classList.remove("wechsel");
@@ -106,7 +68,7 @@ themaButtons.forEach((button) => {
 
 
 const bereiche = document.querySelectorAll(
-    "#start, #taekwondo, #stundenplan, #programme, #events, #sponsoren"
+    "#start, #taekwondo, #stundenplan, #programme, #events, #sponsoren, #team, #stimmen"
 );
 
 const navLinks = document.querySelectorAll(".nav-link");
@@ -130,6 +92,11 @@ if ("IntersectionObserver" in window) {
 
                 if (passenderLink) {
                     passenderLink.classList.add("aktiv");
+                    passenderLink.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
                 }
             });
         },
@@ -164,7 +131,14 @@ const animationsZiele = document.querySelectorAll(
         ".event-karte",
         ".sponsoren-bereich > .eyebrow",
         ".sponsoren-bereich > h2",
-        ".sponsoren-flaeche"
+        ".sponsoren-flaeche",
+        ".team-bereich > .eyebrow",
+        ".team-bereich > h2",
+        ".team-bereich > .einleitung",
+        ".team-karte",
+        ".stimmen-bereich > .eyebrow",
+        ".stimmen-bereich > h2",
+        ".stimme-karte"
     ].join(",")
 );
 
@@ -174,12 +148,8 @@ const wenigerBewegung = window.matchMedia(
 
 
 if ("IntersectionObserver" in window && !wenigerBewegung) {
-    animationsZiele.forEach((element, index) => {
+    animationsZiele.forEach((element) => {
         element.classList.add("einflug");
-
-        if (index % 2 !== 0) {
-            element.classList.add("einflug-von-rechts");
-        }
     });
 
     const einflugObserver = new IntersectionObserver(
@@ -203,3 +173,44 @@ if ("IntersectionObserver" in window && !wenigerBewegung) {
         einflugObserver.observe(element);
     });
 }
+
+
+function alterAktualisieren() {
+    const heute = new Date();
+    const altersFelder = document.querySelectorAll("[data-geburtstag]");
+
+    altersFelder.forEach((feld) => {
+        const [jahr, monat, tag] = feld.dataset.geburtstag
+            .split("-")
+            .map(Number);
+
+        let alter = heute.getFullYear() - jahr;
+        const geburtstagWarSchon =
+            heute.getMonth() + 1 > monat ||
+            (
+                heute.getMonth() + 1 === monat &&
+                heute.getDate() >= tag
+            );
+
+        if (!geburtstagWarSchon) {
+            alter -= 1;
+        }
+
+        feld.textContent = alter;
+    });
+}
+
+
+alterAktualisieren();
+
+const jetzt = new Date();
+const naechsteMitternacht = new Date(
+    jetzt.getFullYear(),
+    jetzt.getMonth(),
+    jetzt.getDate() + 1
+);
+
+window.setTimeout(() => {
+    alterAktualisieren();
+    window.setInterval(alterAktualisieren, 24 * 60 * 60 * 1000);
+}, naechsteMitternacht - jetzt);
