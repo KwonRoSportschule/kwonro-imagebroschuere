@@ -693,6 +693,10 @@ main {
 
 /* Team */
 
+.team-bereich {
+    max-width: 1100px;
+}
+
 .team-grid {
     display: grid;
     grid-auto-rows: 1fr;
@@ -700,11 +704,11 @@ main {
 }
 
 .team-karte {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(112px, 38%) 1fr;
     height: 100%;
-    min-height: 410px;
+    min-height: 280px;
     overflow: hidden;
-    flex-direction: column;
     border-radius: 24px;
     background: var(--weiss);
     box-shadow: var(--schatten);
@@ -712,18 +716,20 @@ main {
 
 .team-karte > img {
     width: 100%;
-    height: 190px;
+    height: 100%;
+    min-height: 280px;
     object-fit: cover;
-    object-position: center 22%;
+    object-position: center top;
     background: #E7EBEF;
 }
 
 .team-inhalt {
     display: grid;
-    flex: 1;
-    grid-template-rows: auto 42px minmax(62px, 1fr) 42px;
-    gap: 8px;
-    padding: 21px 20px 22px;
+    grid-template-rows: auto auto 1fr auto;
+    align-content: start;
+    gap: 12px;
+    min-width: 0;
+    padding: 24px 20px;
 }
 
 .team-inhalt h3 {
@@ -734,8 +740,6 @@ main {
 }
 
 .team-grad {
-    display: flex;
-    align-items: center;
     margin: 0;
     color: #526176;
     font-size: 0.9rem;
@@ -744,8 +748,6 @@ main {
 }
 
 .team-position {
-    display: flex;
-    align-items: flex-start;
     margin: 0;
     color: #526176;
     font-size: 0.9rem;
@@ -754,11 +756,8 @@ main {
 }
 
 .team-alter {
-    display: flex;
-    align-items: flex-end;
     margin: 0;
-    padding-top: 10px;
-    border-top: 1px solid var(--linie);
+    padding: 0;
     color: #526176;
     font-size: 0.9rem;
     font-weight: 700;
@@ -897,8 +896,8 @@ main {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .team-karte {
+        grid-template-columns: minmax(125px, 40%) 1fr;
     }
 
     .mobile-navigation {
@@ -911,6 +910,10 @@ main {
 
 
 @media (min-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .stimmen-grid {
         grid-template-columns: repeat(3, 1fr);
     }
