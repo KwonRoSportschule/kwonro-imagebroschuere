@@ -33,6 +33,29 @@
             line-height: 1.1;
             letter-spacing: -0.035em;
         }
+
+        /* Individuelle Ausschnitte ohne weiße Wand über den Porträts. */
+        .team-foto-ausschnitt {
+            position: relative;
+            width: 100%;
+            min-height: 280px;
+            overflow: hidden;
+            background: #E7EBEF;
+        }
+
+        .team-foto-ausschnitt > img {
+            position: absolute;
+            top: -15%;
+            width: 100%;
+            height: 115%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .team-foto-carina > img {
+            top: -38%;
+            height: 145%;
+        }
     </style>
 </head>
 
@@ -511,7 +534,9 @@
 
             <div class="team-grid">
                 <article class="team-karte">
-                    <img src="bilder/Stefan.jpg" alt="Stefan Roitner" loading="lazy">
+                    <div class="team-foto-ausschnitt">
+                        <img src="bilder/Stefan.jpg" alt="Stefan Roitner" loading="lazy">
+                    </div>
                     <div class="team-inhalt">
                         <h3>Stefan Roitner</h3>
                         <p class="team-alter"><span data-geburtstag="1968-01-26"></span> Jahre</p>
@@ -581,7 +606,9 @@
                 </article>
 
                 <article class="team-karte">
-                    <img src="bilder/Carina.jpg" alt="Carina Gimpl" loading="lazy">
+                    <div class="team-foto-ausschnitt team-foto-carina">
+                        <img src="bilder/Carina.jpg" alt="Carina Gimpl" loading="lazy">
+                    </div>
                     <div class="team-inhalt">
                         <h3>Carina Gimpl</h3>
                         <p class="team-alter"><span data-geburtstag="2004-12-14"></span> Jahre</p>
