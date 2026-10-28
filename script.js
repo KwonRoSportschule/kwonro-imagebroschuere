@@ -68,7 +68,7 @@ themaButtons.forEach((button) => {
 
 
 const bereiche = document.querySelectorAll(
-    "#start, #taekwondo, #stundenplan, #programme, #events, #sponsoren, #team, #stimmen"
+    "#start, #taekwondo, #stundenplan, #programme, #boxing-performance, #events, #sponsoren, #team, #stimmen"
 );
 
 const navLinks = document.querySelectorAll(".nav-link");

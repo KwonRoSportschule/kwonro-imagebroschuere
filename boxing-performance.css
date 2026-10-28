@@ -1,0 +1,38 @@
+/* KwonRo Boxing & Performance: eigener Bereich in den Angebotsfarben. */
+.boxing-performance {
+    --bp-blau: #00244d;
+    --bp-creme: #f6f3ec;
+    --bp-gold: #c8a352;
+    max-width: none;
+    background: var(--bp-blau);
+    color: var(--bp-creme);
+}
+.bp-inner { position: relative; max-width: 1000px; margin: 0 auto; }
+.boxing-performance .bereichsnummer { top: -45px; right: 0; color: rgba(246, 243, 236, 0.09); }
+.bp-coming-soon {
+    display: inline-block; position: relative; margin: 0 0 24px;
+    padding: 9px 14px; border-radius: 8px;
+    background: var(--bp-gold); color: var(--bp-blau);
+    font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.boxing-performance h2 { max-width: 900px; color: var(--bp-creme); font-size: clamp(2.15rem, 7.8vw, 4.6rem); overflow-wrap: normal; }
+.bp-leitsatz { margin: 26px 0 20px; color: var(--bp-gold); font-size: clamp(1.45rem, 4.5vw, 2rem); font-weight: 800; line-height: 1.25; }
+.bp-einstieg { max-width: 720px; margin-bottom: 38px; }
+.bp-einstieg p { margin: 0 0 18px; font-size: 1.05rem; line-height: 1.7; }
+.bp-angebote { display: grid; gap: 28px; }
+.bp-angebot { overflow: hidden; border-radius: 24px; background: var(--bp-creme); color: var(--bp-blau); }
+.bp-angebot > img { width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; }
+.bp-angebot-text { padding: 28px 24px 32px; }
+.bp-angebot h3 { margin: 0 0 16px; font-size: clamp(1.8rem, 6vw, 2.5rem); line-height: 1.1; letter-spacing: -0.035em; }
+.bp-angebot h3::after { content: ""; display: block; width: 54px; height: 4px; margin-top: 18px; background: var(--bp-gold); border-radius: 4px; }
+.bp-motto { margin: 0 0 18px; font-weight: 800; font-size: 1.15rem; line-height: 1.4; }
+.bp-angebot-text > p:last-child { margin: 0; line-height: 1.75; }
+.bp-interesse { margin-top: 38px; padding: 28px 24px; border: 1px solid var(--bp-gold); border-radius: 24px; }
+.bp-interesse h3 { margin: 0 0 14px; color: var(--bp-gold); font-size: 1.7rem; line-height: 1.2; }
+.bp-interesse p { max-width: 740px; margin: 0; line-height: 1.75; }
+@media (min-width: 700px) {
+    .bp-angebot { display: grid; grid-template-columns: 42% minmax(0, 1fr); align-items: center; }
+    .bp-angebot > img { align-self: stretch; height: 100%; }
+    .bp-angebot-text { padding: clamp(26px, 4vw, 48px); }
+    .bp-interesse { padding: 36px 40px; }
+}
